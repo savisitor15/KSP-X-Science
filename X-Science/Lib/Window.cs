@@ -81,10 +81,10 @@ namespace ScienceChecklist
 			mouseDown = false;
 			visible = false;
 
-			var texture = TextureHelper.FromResource( "ScienceChecklist.icons.resize.png", 16, 16 );
+			var texture = TextureHelper.LoadImage( "icons\\resize.png", 16, 16 );
 			resizeContent = (texture != null) ? new GUIContent(texture, "Drag to resize the window") : new GUIContent("R", "Drag to resize the window");
 
-			var closetexture = TextureHelper.FromResource( "ScienceChecklist.icons.close.png", 16, 16 );
+			var closetexture = TextureHelper.LoadImage( "icons\\close.png", 16, 16 );
 			closeContent = ( closetexture != null ) ? new GUIContent( closetexture, "Close window" ) : new GUIContent( "X", "Close window" );
 		}
 

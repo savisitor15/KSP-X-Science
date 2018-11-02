@@ -53,15 +53,15 @@ namespace ScienceChecklist
 			_emptyTexture = new Texture2D(1, 1, TextureFormat.ARGB32, false);
 			_emptyTexture.SetPixels(new[] { Color.clear });
 			_emptyTexture.Apply();
-			_progressTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.scienceProgress.png", 13, 13 );
-			_completeTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.scienceComplete.png", 13, 13 );
+			_progressTexture =						TextureHelper.LoadImage( "icons\\scienceProgress.png", 13, 13 );
+			_completeTexture =						TextureHelper.LoadImage( "icons\\scienceComplete.png", 13, 13 );
 
-			_GfxTimeWarp =							TextureHelper.FromResource( "ScienceChecklist.icons.time-warp.png", 13, 13 );
-			_GfxTimeWarpOff =						TextureHelper.FromResource( "ScienceChecklist.icons.time-warp-x.png", 13, 13 );
-			_GfxAudioAlert =						TextureHelper.FromResource( "ScienceChecklist.icons.audio-alert.png", 13, 13 );
-			_GfxAudioAlertOff =						TextureHelper.FromResource( "ScienceChecklist.icons.audio-alert-off.png", 13, 13 );
-			_GfxResultsWindow =						TextureHelper.FromResource( "ScienceChecklist.icons.report.png", 13, 13 );
-			_GfxResultsWindowOff =					TextureHelper.FromResource( "ScienceChecklist.icons.report-x.png", 13, 13 );
+			_GfxTimeWarp =							TextureHelper.LoadImage( "icons\\time-warp.png", 13, 13 );
+			_GfxTimeWarpOff =						TextureHelper.LoadImage( "icons\\time-warp-x.png", 13, 13 );
+			_GfxAudioAlert =						TextureHelper.LoadImage( "icons\\audio-alert.png", 13, 13 );
+			_GfxAudioAlertOff =						TextureHelper.LoadImage( "icons\\audio-alert-off.png", 13, 13 );
+			_GfxResultsWindow =						TextureHelper.LoadImage( "icons\\report.png", 13, 13 );
+			_GfxResultsWindowOff =					TextureHelper.LoadImage( "icons\\report-x.png", 13, 13 );
 
 			_availableScienceExperiments = new Dictionary<string, bool>( );
 

@@ -635,7 +635,7 @@ namespace ScienceChecklist {
 				var texturePath = "ScienceChecklist/ChecklistSmall.png";
 				if( !GameDatabase.Instance.ExistsTexture( texturePath ) )
 				{
-					var texture = TextureHelper.FromResource( "ScienceChecklist.icons.icon-small.png", 24, 24 );
+					var texture = TextureHelper.LoadImage( "icons\\icon-small.png", 24, 24 );
 					var ti = new GameDatabase.TextureInfo( null, texture, false, true, true );
 					ti.name = texturePath;
 					GameDatabase.Instance.databaseTexture.Add( ti );
@@ -655,7 +655,7 @@ namespace ScienceChecklist {
 
 
 
-			StockTexture = TextureHelper.FromResource( "ScienceChecklist.icons.icon.png", 38, 38 );
+			StockTexture = TextureHelper.LoadImage( "icons\\icon.png", 38, 38 );
 /*			if( StockTexture != null )
 				_logger.Info( "Load : Stock texture" );
 			else
@@ -691,7 +691,7 @@ namespace ScienceChecklist {
 					var texturePath = "ScienceChecklist/StatusSmall.png";
 					if( !GameDatabase.Instance.ExistsTexture( texturePath ) )
 					{
-						var texture = TextureHelper.FromResource( "ScienceChecklist.icons.icon-status-small.png", 24, 24 );
+						var texture = TextureHelper.LoadImage( "icons\\icon-status-small.png", 24, 24 );
 						var ti = new GameDatabase.TextureInfo( null, texture, false, true, true );
 						ti.name = texturePath;
 						GameDatabase.Instance.databaseTexture.Add( ti );
@@ -711,7 +711,7 @@ namespace ScienceChecklist {
 
 
 
-				StockTexture = TextureHelper.FromResource( "ScienceChecklist.icons.icon-status.png", 38, 38 );
+				StockTexture = TextureHelper.LoadImage( "icons\\icon-status.png", 38, 38 );
 	/*			if( StockTexture != null )
 					_logger.Info( "Load : Stock texture" );
 				else
@@ -803,7 +803,7 @@ namespace ScienceChecklist {
 		private void HammerMusicMute( )
 		{
 			if( muted )
-				 MusicLogic.SetVolume( 0f );
+				MusicLogic.SetVolume(0f);
 		}
 
 

@@ -87,21 +87,21 @@ namespace ScienceChecklist
 			_scrollPos = new Vector2();
 			_filter = new ExperimentFilter( _parent );
 
-			_progressTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.scienceProgress.png", 13, 13 );
-			_completeTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.scienceComplete.png", 13, 13 );
-			_progressTextureCompact =				TextureHelper.FromResource( "ScienceChecklist.icons.scienceProgressCompact.png", 8, 8 );
-			_completeTextureCompact =				TextureHelper.FromResource( "ScienceChecklist.icons.scienceCompleteCompact.png", 8, 8 );
-			_currentSituationTexture =				TextureHelper.FromResource( "ScienceChecklist.icons.currentSituation.png", 25, 21 );
-			_currentVesselTexture =					TextureHelper.FromResource( "ScienceChecklist.icons.currentVessel.png", 25, 21 );
-			_unlockedTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.unlocked.png", 25, 21 );
-			_allTexture =							TextureHelper.FromResource( "ScienceChecklist.icons.all.png", 25, 21 );
-			_searchTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.search.png", 25, 21 );
-			_clearSearchTexture =					TextureHelper.FromResource( "ScienceChecklist.icons.clearSearch.png", 25, 21 );
-			_minimizeTexture=						TextureHelper.FromResource( "ScienceChecklist.icons.minimize.png", 16, 16 );
-			_maximizeTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.maximize.png", 16, 16 );
-			_closeTexture =							TextureHelper.FromResource( "ScienceChecklist.icons.close.png", 16, 16 );
-			_helpTexture =							TextureHelper.FromResource( "ScienceChecklist.icons.help.png", 16, 16 );
-			_settingsTexture =						TextureHelper.FromResource( "ScienceChecklist.icons.settings.png", 16, 16 );
+			_progressTexture =						TextureHelper.LoadImage( "icons\\scienceProgress.png", 13, 13 );
+			_completeTexture =						TextureHelper.LoadImage( "icons\\scienceComplete.png", 13, 13 );
+			_progressTextureCompact =				TextureHelper.LoadImage( "icons\\scienceProgressCompact.png", 8, 8 );
+			_completeTextureCompact =				TextureHelper.LoadImage( "icons\\scienceCompleteCompact.png", 8, 8 );
+			_currentSituationTexture =				TextureHelper.LoadImage( "icons\\currentSituation.png", 25, 21 );
+			_currentVesselTexture =					TextureHelper.LoadImage( "icons\\currentVessel.png", 25, 21 );
+			_unlockedTexture =						TextureHelper.LoadImage( "icons\\unlocked.png", 25, 21 );
+			_allTexture =							TextureHelper.LoadImage( "icons\\all.png", 25, 21 );
+			_searchTexture =						TextureHelper.LoadImage( "icons\\search.png", 25, 21 );
+			_clearSearchTexture =					TextureHelper.LoadImage( "icons\\clearSearch.png", 25, 21 );
+			_minimizeTexture=						TextureHelper.LoadImage( "icons\\minimize.png", 16, 16 );
+			_maximizeTexture =						TextureHelper.LoadImage( "icons\\maximize.png", 16, 16 );
+			_closeTexture =							TextureHelper.LoadImage( "icons\\close.png", 16, 16 );
+			_helpTexture =							TextureHelper.LoadImage( "icons\\help.png", 16, 16 );
+			_settingsTexture =						TextureHelper.LoadImage( "icons\\settings.png", 16, 16 );
 
 			_emptyTexture = new Texture2D(1, 1, TextureFormat.ARGB32, false);
 			_emptyTexture.SetPixels(new[] { Color.clear });
