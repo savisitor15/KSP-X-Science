@@ -1,4 +1,6 @@
-﻿
+﻿using UnityEngine;
+
+
 namespace ScienceChecklist {
 	/// <summary>
 	/// An object that represents a ScienceExperiement in a given Situation.
@@ -98,22 +100,21 @@ namespace ScienceChecklist {
 		/// Updates the IsUnlocked, CompletedScience, TotalScience, OnboardScience, and IsComplete fields.
 		/// </summary>
 		/// <param name="onboardScience">The total onboard ScienceData.</param>
-		public void Update( ScienceContext Sci )
-		{
+		public void Update( ScienceContext Sci ){
 			if( Sci.ScienceSubjects.ContainsKey( Id ) )
 				ScienceSubject = Sci.ScienceSubjects[ Id ];
-			else ScienceSubject = new ScienceSubject(ScienceExperiment, Situation.ExperimentSituation, Situation.Body.CelestialBody, Situation.SubBiome ?? Situation.Biome ?? string.Empty);
+			else
+				ScienceSubject = new ScienceSubject(ScienceExperiment, Situation.ExperimentSituation, Situation.Body.CelestialBody, Situation.SubBiome ?? Situation.Biome ?? string.Empty);
 
-
-			IsUnlocked = Sci.UnlockedInstruments.IsUnlocked( ScienceExperiment.id ) && ( Situation.Body.Reached );
+			// Check if given body is reached first. We don't have to check if experiment's part is unlocked if body has not been reached.
+			// If compiler didn't optimized the test, it should be much faster.
+			IsUnlocked = Situation.Body.Reached && Sci.UnlockedInstruments.IsUnlocked(ScienceExperiment.id);
 
 			CompletedScience = ScienceSubject.science * HighLogic.CurrentGame.Parameters.Career.ScienceGainMultiplier;
 			TotalScience = ScienceSubject.scienceCap * HighLogic.CurrentGame.Parameters.Career.ScienceGainMultiplier;
 			IsComplete = CompletedScience > TotalScience || TotalScience - CompletedScience < 0.1;
 
 			var multiplier = ScienceExperiment.baseValue / ScienceExperiment.scienceCap;
-
-
 
 			OnboardScience = 0;
 			if( Sci.OnboardScienceList.ContainsKey( ScienceSubject.id ) )
