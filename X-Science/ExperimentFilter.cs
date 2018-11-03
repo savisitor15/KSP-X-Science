@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 
 
@@ -105,7 +106,7 @@ namespace ScienceChecklist {
 		/// Recalculates the experiments to be displayed.
 		/// </summary>
 		public void UpdateFilter () {
-			var StartTime = DateTime.Now;
+			// var StartTime = DateTime.Now;
 //			_logger.Trace("UpdateFilter");
 			var query = _parent.Science.AllScienceInstances.AsEnumerable( );
 			switch (_displayMode) {
@@ -183,7 +184,7 @@ namespace ScienceChecklist {
 
 
 
-			var Elapsed = DateTime.Now - StartTime;
+			// var Elapsed = DateTime.Now - StartTime;
 //			_logger.Trace( "UpdateFilter Done - " + Elapsed.ToString( ) + "ms" );
 		}
 
@@ -254,7 +255,6 @@ namespace ScienceChecklist {
 			if (vessel == null) {
 				return Enumerable.Empty<ScienceInstance>();
 			}
-
 			src = ApplyActiveVesselFilter(src);
 
 			return src
