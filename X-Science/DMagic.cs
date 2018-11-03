@@ -87,7 +87,8 @@ namespace ScienceChecklist
 		{
 			if( _tDMModuleScienceAnimate == null )
 				return false;
-			return ((o.GetType().IsSubclassOf(_tDMModuleScienceAnimate) || o.GetType() == _tDMModuleScienceAnimate));
+			var object_type = o.GetType();
+			return ((object_type == _tDMModuleScienceAnimate) || (object_type.IsSubclassOf(_tDMModuleScienceAnimate)));
 		}
 
 
@@ -96,7 +97,8 @@ namespace ScienceChecklist
 		{
 			if( _tDMModuleScienceAnimateGeneric == null )
 				return false;
-			return ((o.GetType().IsSubclassOf(_tDMModuleScienceAnimateGeneric) || o.GetType() == _tDMModuleScienceAnimateGeneric));
+			var object_type = o.GetType();
+			return ((object_type == _tDMModuleScienceAnimateGeneric) || (object_type.IsSubclassOf(_tDMModuleScienceAnimateGeneric)));
 		}
 		
 		
@@ -105,7 +107,8 @@ namespace ScienceChecklist
 		{
 			if( _tDMBasicScienceModule == null )
 				return false;
-			return ((o.GetType().IsSubclassOf(_tDMBasicScienceModule) || o.GetType() == _tDMBasicScienceModule));
+			var object_type = o.GetType();
+			return ((object_type == _tDMBasicScienceModule) || (object_type.IsSubclassOf(_tDMBasicScienceModule)));
 		}
 
 
