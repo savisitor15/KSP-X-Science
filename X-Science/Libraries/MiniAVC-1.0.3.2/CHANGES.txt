@@ -1,3 +1,13 @@
+1.0.3.3
+    Build on KSP 1.2.0.1586
+    Fixed: URLs are escaped before being processed.
+
+1.0.3.2
+    Built on KSP 1.1.0.1230
+
+1.0.3.1
+    Built on KSP Experimental 1.1.0.1171
+
 1.0.3.0
     Added: Remote version files take priority when local/remote add-on versions are the same.
     Added: 'Any' type versions are now fully supported.
