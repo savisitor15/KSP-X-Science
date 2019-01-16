@@ -95,7 +95,14 @@ namespace ScienceChecklist
 				save = true;
 			}
 
-			toggle = GUILayout.Toggle( _parent.Config.SelectedObjectWindow, new GUIContent( "Selected Object Window", "Show the Selected Object Window in the Tracking Station." ), toggleStyle );
+            toggle = GUILayout.Toggle(_parent.Config.StopTimeWarp, new GUIContent("Stop time warp", "Pause Time warp if a new unresearched science item(s) is available in the region the vessel is in."), toggleStyle);
+            if (toggle != _parent.Config.StopTimeWarp)
+            {
+                _parent.Config.StopTimeWarp = toggle;
+                save = true;
+            }
+
+            toggle = GUILayout.Toggle( _parent.Config.SelectedObjectWindow, new GUIContent( "Selected Object Window", "Show the Selected Object Window in the Tracking Station." ), toggleStyle );
 			if( toggle != _parent.Config.SelectedObjectWindow )
 			{
 				_parent.Config.SelectedObjectWindow = toggle;
